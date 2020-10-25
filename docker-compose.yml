@@ -5,12 +5,18 @@ services:
        ports: 
          - 30005:30005
        privileged: true
+       deploy:
+         restart_policy:
+             condition: on-failure
        volumes:
          - /dev/bus/usb:/dev/bus/usb
        networks:
          - planesense
     connect:
        image: airconnect
+       deploy:
+         restart_policy:
+             condition: any
        networks:
          - planesense
 networks:
