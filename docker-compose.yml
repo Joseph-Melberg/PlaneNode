@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+    airrun:
+       image: airrun
+       ports: 
+         - 30005:30005
+       privileged: true
+       volumes:
+         - /dev/bus/usb:/dev/bus/usb
+       networks:
+         - planesense
+    connect:
+       image: airconnect
+       networks:
+         - planesense
+networks:
+    planesense: {}
