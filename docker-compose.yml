@@ -10,14 +10,18 @@ services:
              condition: on-failure
        volumes:
          - /dev/bus/usb:/dev/bus/usb
-       networks:
-         - planesense
+       network_mode: "host"
+#       networks:
+#         - host
+#         - planesense
     connect:
        image: airconnect
        deploy:
          restart_policy:
              condition: any
-       networks:
-         - planesense
-networks:
-    planesense: {}
+       network_mode: "host"
+#       networks:
+#          - host
+#         - planesense
+#networks:
+#    planesense: {}
