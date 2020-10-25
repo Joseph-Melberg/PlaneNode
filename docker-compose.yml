@@ -1,7 +1,7 @@
 version: "3.7"
 services:
     airrun:
-       image: airrun
+       image: docker.centurionx.net/airrun:stable
        ports: 
          - 30005:30005
        privileged: true
@@ -15,7 +15,7 @@ services:
 #         - host
 #         - planesense
     connect:
-       image: airconnect
+       image: docker.centurionx.net/airconnect
        deploy:
          restart_policy:
              condition: any
