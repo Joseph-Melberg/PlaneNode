@@ -2,8 +2,6 @@ version: "3.7"
 services:
     airrun:
        image: docker.centurionx.net/airrun:stable
-       ports: 
-         - 30005:30005
        privileged: true
        deploy:
          restart_policy:
@@ -11,17 +9,10 @@ services:
        volumes:
          - /dev/bus/usb:/dev/bus/usb
        network_mode: "host"
-#       networks:
-#         - host
-#         - planesense
     connect:
        image: docker.centurionx.net/airconnect
        deploy:
          restart_policy:
              condition: any
        network_mode: "host"
-#       networks:
-#          - host
-#         - planesense
-#networks:
-#    planesense: {}
+
