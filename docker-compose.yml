@@ -1,7 +1,7 @@
 version: "3.7"
 services:
     airrun:
-       image: docker.centurionx.net/airrun:stable
+       image: docker.centurionx.net/airrun
        privileged: true
        logging:
         driver: none
