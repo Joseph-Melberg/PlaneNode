@@ -15,7 +15,7 @@ channel = connection.channel()
 channel.exchange_declare(exchange='Inter',exchange_type='direct',durable=True)
 channel.queue_declare(queue='Reader')
 messa = {}
-messa["Name"] = argv[1] 
+messa["Name"] = sys.argv[1] 
 def getMAC(interface='eth0'):
   # Return the MAC address of the specified interface
   try:
