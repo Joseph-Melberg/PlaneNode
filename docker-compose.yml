@@ -19,4 +19,13 @@ services:
          restart_policy:
              condition: any
        network_mode: "host"
+    airheart:
+       image: docker.centurionx.net/heart
+       logging:
+        driver: none
+       environment:
+        - NAME=kiloNode
+       deploy:
+         restart_policy:
+             condition: any
 
