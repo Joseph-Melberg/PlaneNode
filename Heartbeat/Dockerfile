@@ -4,4 +4,4 @@ RUN pip3 install pika
 COPY Heart.py Heart.py
 COPY cronfile cronfile
 RUN crontab < cronfile
-ENTRYPOINT bash sleep 1000
+ENTRYPOINT sleep 1000
