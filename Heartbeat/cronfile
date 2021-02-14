@@ -1,1 +1,1 @@
-* * * * * python3 Heart.py $NAME 
+* * * * * python3 /Heart.py $NAME; touch /bcd 
