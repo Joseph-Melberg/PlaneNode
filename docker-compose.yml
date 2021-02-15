@@ -23,8 +23,8 @@ services:
        image: docker.centurionx.net/heart
        logging:
         driver: none
-       environment:
-        - NAME=kiloNode
+       env_file:
+        - environ.env 
        deploy:
          restart_policy:
              condition: any
